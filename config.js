@@ -1,3 +1,3 @@
 exports.Prefix = `!`;
-exports.Token = `your token`;
+exports.Token = `your bot token`;
 exports.Color = `RANDOM`;
