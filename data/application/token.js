@@ -1,0 +1,1 @@
+exports.Token = `your bot token`;
