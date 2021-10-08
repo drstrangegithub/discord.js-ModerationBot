@@ -1,7 +1,9 @@
+var fs = require('fs');
 const Discord = require("discord.js");
-const fs = require("fs");
 const client = new Discord.Client();
-const { Prefix, Token, Color } = require("./config.js");
+const { Prefix } = require('./data/application/prefix.js');
+const { Color } = require('./data/colors/random_color.js');
+const { Token } = require('./data/application/token.js');
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 client.db = require("quick.db");
@@ -21,7 +23,7 @@ client.on("message", async message => {
     message.member = await message.guild.fetchMember(message);
 
   if (message.content.match(new RegExp(`^<@!?${client.user.id}>`))) {
-    return message.channel.send(`Bot Prefix : ${Prefix}`);
+    return message.channel.send(`Bot prefix : ${Prefix}`);
   }
 });
 
@@ -31,7 +33,7 @@ modules.forEach(function(module) {
   fs.readdir(`./commands/${module}`, function(err, files) {
     if (err)
       return new Error(
-        "Missing Folder Of Commands! Example : Commands/<Folder>/<Command>.js"
+        "Missing folder of commands! For example; Commands/<Folder>/<Command>.js"
       );
     files.forEach(function(file) {
       if (!file.endsWith(".js")) return;
