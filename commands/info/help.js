@@ -17,6 +17,7 @@ module.exports = {
     .setDescription(`Use ${Prefix}Help <Command Name> For More Command Information!` + 
     "\n\n`😉`**Fun**\n`Avatar, Coinflip, Howgay, Meme, Rate, 8ball, Ascii, Choose, Hack, Randomnumber`" + "\n\n" + "`🔐`**Moderation**\n`Clear, Mute, Unmute, Tempmute, Kick, Ban, Unban, Tempban, Warn, Warnings, ResetWarns`" + "\n\n"+
     "`⌚`**Information**\n`Help, Covid, Weather, Userinfo, Serverinfo, Ping`")
+    .addField(`**Links!**`, `**[Vote]("vote link") • [Invite]("invite link")**`)
     .setFooter(`Requested By ${message.author.username}`)
     .setTimestamp();
     
